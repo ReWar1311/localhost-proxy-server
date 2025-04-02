@@ -13,7 +13,6 @@ proxy.addRoute('/api/mailbox', 'https://web2.temp-mail.org/mailbox', {
     "accept-language": "en-US,en;q=0.9",
     "authorization": `Bearer ${token}`,
     "cache-control": "no-cache",
-    "pragma": "no-cache",
     "referer": "https://temp-mail.org/",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors"

@@ -1,6 +1,6 @@
 {
   "name": "localhost-proxy-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple local proxy server to forward requests",
   "license": "MIT",
   "repository": {
@@ -11,6 +11,7 @@
     "url": "https://github.com/ReWar1311/localhost-proxy-server.git/issues"
   },
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
@@ -26,5 +27,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17"
   }
 }
