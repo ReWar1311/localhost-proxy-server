@@ -53,8 +53,15 @@ const proxy = {
           headers: options.headers || {},
           ...options
         };
-        
-        const response = await fetch(targetUrl, requestOptions);
+        if (method !== 'get' && req.body && Object.keys(req.body).length > 0) {
+          requestOptions.body = JSON.stringify(req.body);
+          if (!requestOptions.headers['content-type']) {
+            requestOptions.headers['content-type'] = 'application/json';
+          }
+        }
+        const queryString = new URLSearchParams(req.query).toString();
+        const urlWithQuery = queryString ? `${targetUrl}?${queryString}` : targetUrl;
+        const response = await fetch(urlWithQuery, requestOptions);
         
         if (!response.ok) {
           throw new Error(`API responded with status: ${response.status}`);
