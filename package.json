@@ -1,5 +1,5 @@
 {
-  "name": "localhost-proxy",
+  "name": "localhost-proxy-server",
   "version": "1.0.0",
   "description": "A simple local proxy server to forward requests",
   "main": "src/index.js",
