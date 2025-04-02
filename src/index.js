@@ -15,6 +15,7 @@ const proxy = {
     this.server = this.app.listen(port, () => {
       console.log(`Proxy server running on http://localhost:${port}`);
     });
+    return this;
   },
   
 
@@ -23,6 +24,7 @@ const proxy = {
       this.server.close();
       console.log('Proxy server stopped');
     }
+    return this;
   },
   
 
@@ -32,6 +34,7 @@ const proxy = {
     if (this.server) {
       this.setupRoute(localPath, targetUrl, options);
     }
+    return this;
   },
 
   setupRoutes() {
@@ -39,7 +42,7 @@ const proxy = {
       this.setupRoute(path, config.targetUrl, config.options);
     }
   },
-  
+
   setupRoute(localPath, targetUrl, options = {}) {
     const method = (options.method || 'GET').toLowerCase();
     
