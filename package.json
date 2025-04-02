@@ -1,7 +1,15 @@
 {
   "name": "localhost-proxy-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple local proxy server to forward requests",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReWar1311/localhost-proxy-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ReWar1311/localhost-proxy-server.git/issues"
+  },
   "main": "src/index.js",
   "type": "module",
   "scripts": {
